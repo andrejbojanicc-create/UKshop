@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nitro Method</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #0d0d0d;
+        color: #fff;
+    }
+
+    header {
+        padding: 20px;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        background: #111;
+        border-bottom: 1px solid #222;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
+    }
+
+    .card {
+        background: #111;
+        border: 1px solid #222;
+        padding: 40px;
+        border-radius: 12px;
+        text-align: center;
+        width: 320px;
+        transition: 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card:hover {
+        transform: translateY(-10px) scale(1.02);
+        border-color: #00ffcc;
+        box-shadow: 0 0 25px rgba(0,255,204,0.2);
+    }
+
+    .card::before {
+        content: "";
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(120deg, transparent, rgba(0,255,204,0.2), transparent);
+        transition: 0.5s;
+    }
+
+    .card:hover::before {
+        top: 100%;
+    }
+
+    h2 {
+        margin-bottom: 15px;
+        font-size: 24px;
+    }
+
+    .price {
+        font-size: 32px;
+        color: #00ffcc;
+        margin: 20px 0;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 20px;
+        border-radius: 8px;
+        border: 1px solid #00ffcc;
+        color: #00ffcc;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #00ffcc;
+        color: #000;
+        box-shadow: 0 0 15px #00ffcc;
+    }
+
+    .payment {
+        margin-top: 15px;
+        font-size: 14px;
+        color: #aaa;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        border-top: 1px solid #222;
+        color: #666;
+        font-size: 14px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    NITRO METHOD
+</header>
+
+<div class="container">
+    <div class="card">
+        <h2>Nitro Method</h2>
+        <p>Premium service designed for fast results.</p>
+
+        <div class="price">€4</div>
+
+        <a href="#" class="btn">Buy Now</a>
+
+        <div class="payment">
+            Payment: Litecoin (LTC) only
+        </div>
+    </div>
+</div>
+
+<footer>
+    Coming Soon...
+</footer>
+
+</body>
+</html>

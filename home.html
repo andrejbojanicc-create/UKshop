@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to Nitro Method</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #050505;
+    color: white;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Glowing animated background */
+body::before {
+    content: "";
+    position: fixed;
+    width: 1000px;
+    height: 1000px;
+    background: rgba(0,255,200,0.08);
+    filter: blur(200px);
+    top: -300px;
+    left: -300px;
+    animation: bgMove 20s infinite alternate;
+    z-index: -1;
+}
+@keyframes bgMove {
+    0% { transform: translate(0,0); }
+    50% { transform: translate(400px,200px); }
+    100% { transform: translate(0,0); }
+}
+
+/* Headline */
+h1 {
+    font-size: 64px;
+    color: #00ffc8;
+    text-shadow: 0 0 10px #00ffc8, 0 0 20px #00ffc8, 0 0 30px #00ffc8;
+    margin-bottom: 20px;
+    transition: 0.4s;
+}
+h1:hover {
+    text-shadow: 0 0 20px #00ffc8, 0 0 40px #00ffc8, 0 0 60px #00ffc8;
+    transform: scale(1.05);
+}
+
+/* Subheading */
+p {
+    font-size: 20px;
+    color: #aaa;
+    max-width: 600px;
+    margin-bottom: 40px;
+    transition: 0.3s;
+}
+p:hover {
+    color: #00ffc8;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid #00ffc8;
+    color: #00ffc8;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #00ffc8;
+    color: black;
+    box-shadow: 0 0 20px #00ffc8, 0 0 40px #00ffc8;
+    transform: scale(1.05);
+}
+
+/* Sparkle animation for CTA buttons */
+.btn::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+</style>
+</head>
+<body>
+
+<h1>Unlock Premium Features Today</h1>
+<p>Get access to Nitro Method, premium credit cards, and exclusive Discord benefits at unbeatable prices. Join thousands of satisfied users and level up your Discord experience instantly!</p>
+
+<!-- Buttons -->
+<a href="index.html" class="btn">View Products</a>
+<a href="https://discord.gg/cAHcmxJX" target="_blank" class="btn">Join Discord</a>
+
+</body>
+</html>

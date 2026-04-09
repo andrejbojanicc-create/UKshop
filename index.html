@@ -3,47 +3,98 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nitro Method</title>
+<title>Nitro Method Premium</title>
 <style>
+/* General dark theme */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background: #050505;
     color: white;
-    text-align: center;
-    padding: 50px 20px 100px 20px;
     overflow-x: hidden;
 }
+
+/* Glowing background effect */
 body::before {
-    content: "";
+    content:"";
     position: fixed;
-    width: 600px;
-    height: 600px;
+    width: 800px;
+    height: 800px;
     background: rgba(0,255,200,0.08);
-    filter: blur(120px);
-    top: -100px;
-    left: -100px;
-    animation: move 10s infinite alternate;
+    filter: blur(150px);
+    top: -150px;
+    left: -150px;
+    animation: glow 15s infinite alternate;
+    z-index: -1;
 }
-@keyframes move {
+@keyframes glow {
     0% { transform: translate(0,0); }
-    100% { transform: translate(300px,200px); }
+    50% { transform: translate(300px,150px); }
+    100% { transform: translate(0,0); }
 }
+
+/* Left-side fixed menu */
+.menu {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.menu a {
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: 1px solid #00ffc8;
+    color: #00ffc8;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    gap: 8px;
+}
+.menu a:hover {
+    background: #00ffc8;
+    color: black;
+    box-shadow: 0 0 20px #00ffc8;
+}
+
+/* Cards container */
+.container {
+    margin-left: 120px;
+    padding: 50px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+/* Product card */
 .card {
     background: rgba(20,20,20,0.9);
-    padding: 50px;
+    padding: 40px;
     border-radius: 15px;
-    display: inline-block;
     border: 1px solid #222;
+    width: 250px;
     transition: 0.4s;
+    text-align: center;
 }
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 40px rgba(0,255,200,0.4);
     border-color: #00ffc8;
 }
-h1 { margin-bottom: 10px; }
-p { color: #aaa; font-size: 16px; margin-bottom: 20px; }
+.card h2 {
+    margin-bottom: 15px;
+}
+.card p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+/* Buy button */
 .btn {
     display: inline-block;
     padding: 12px 25px;
@@ -51,7 +102,6 @@ p { color: #aaa; font-size: 16px; margin-bottom: 20px; }
     border: 1px solid #00ffc8;
     color: #00ffc8;
     text-decoration: none;
-    margin: 5px;
     transition: 0.3s;
 }
 .btn:hover {
@@ -59,48 +109,57 @@ p { color: #aaa; font-size: 16px; margin-bottom: 20px; }
     color: black;
     box-shadow: 0 0 20px #00ffc8;
 }
-.footer-buttons {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-.footer-buttons a {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-weight: bold;
-}
-.footer-buttons img {
-    height: 16px;
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #555;
 }
 </style>
 </head>
-
 <body>
 
-<div class="card">
-    <h1>Nitro Method</h1>
-    <p>Unlock premium features instantly for €4.</p>
-    <a href="checkout.html" class="btn">Buy Now</a>
-</div>
-
-<!-- Footer buttons only -->
-<div class="footer-buttons">
-    <!-- About Us button -->
-    <a href="about.html" class="btn">About Us</a>
-
-    <!-- Discord button -->
-    <a href="https://discord.gg/cAHcmxJX" target="_blank" class="btn">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord">
-        Join Discord
+<!-- Left-side menu -->
+<div class="menu">
+    <a href="about.html">About Us</a>
+    <a href="https://discord.gg/cAHcmxJX" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord" style="height:16px;">
+        Discord
     </a>
+    <a href="#products">Products</a>
 </div>
 
-<footer style="margin-top:200px;">More services coming soon...</footer>
+<!-- Products section -->
+<div class="container" id="products">
+
+    <!-- Nitro Method -->
+    <div class="card">
+        <h2>Nitro Method</h2>
+        <p>Unlock premium features instantly.</p>
+        <p><strong>€4</strong></p>
+        <a href="checkout.html" class="btn">Buy Now</a>
+    </div>
+
+    <!-- Italian CC -->
+    <div class="card">
+        <h2>Italian CC 🇮🇹</h2>
+        <p>Premium Italian credit card service.</p>
+        <p><strong>€5</strong></p>
+        <a href="checkout.html?product=italian" class="btn">Buy Now</a>
+    </div>
+
+    <!-- French CC -->
+    <div class="card">
+        <h2>French CC 🇫🇷</h2>
+        <p>Premium French credit card service.</p>
+        <p><strong>€3</strong></p>
+        <a href="checkout.html?product=french" class="btn">Buy Now</a>
+    </div>
+
+</div>
+
+<footer>More services coming soon...</footer>
 
 </body>
 </html>

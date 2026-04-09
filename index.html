@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nitro Method Premium</title>
+<title>Nitro Method Products</title>
 <style>
-/* General dark theme */
+/* Dark theme */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -61,7 +61,7 @@ body::before {
     box-shadow: 0 0 20px #00ffc8;
 }
 
-/* Cards container */
+/* Products container */
 .container {
     margin-left: 120px;
     padding: 50px 20px;
@@ -78,12 +78,12 @@ body::before {
     border-radius: 15px;
     border: 1px solid #222;
     width: 250px;
-    transition: 0.4s;
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 40px rgba(0,255,200,0.4);
+    transform: scale(1.08) translateY(-5px);
+    box-shadow: 0 0 50px rgba(0,255,200,0.6);
     border-color: #00ffc8;
 }
 .card h2 {
@@ -107,10 +107,11 @@ body::before {
 .btn:hover {
     background: #00ffc8;
     color: black;
-    box-shadow: 0 0 20px #00ffc8;
+    box-shadow: 0 0 20px #00ffc8, 0 0 40px #00ffc8;
+    transform: scale(1.05);
 }
 
-/* "More Products Coming Soon" banner */
+/* Coming soon banner */
 .coming-soon {
     width: 100%;
     text-align: center;
@@ -126,40 +127,61 @@ body::before {
     50% { text-shadow: 0 0 15px #00ffc8, 0 0 30px #00ffc8, 0 0 45px #00ffc8; }
     100% { text-shadow: 0 0 5px #00ffc8, 0 0 10px #00ffc8; }
 }
+
+/* Payment guide */
+.payment-guide {
+    margin: 60px auto 50px auto;
+    max-width: 700px;
+    text-align: center;
+    font-size: 18px;
+    color: #aaa;
+    padding: 20px;
+    border: 1px solid #00ffc8;
+    border-radius: 15px;
+    background: rgba(20,20,20,0.85);
+    box-shadow: 0 0 20px rgba(0,255,200,0.4);
+    transition: 0.3s;
+}
+.payment-guide:hover {
+    color: #00ffc8;
+    box-shadow: 0 0 30px #00ffc8, 0 0 50px #00ffc8;
+}
+
+/* Icons inside menu */
+.menu img {
+    height: 16px;
+}
 </style>
 </head>
 <body>
 
-<!-- Left-side menu -->
+<!-- Left-side menu with Home icon -->
 <div class="menu">
+    <a href="home.html">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/home.svg" alt="Home">
+        Home
+    </a>
     <a href="about.html">About Us</a>
     <a href="https://discord.gg/cAHcmxJX" target="_blank">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord" style="height:16px;">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord">
         Discord
     </a>
-    <a href="#products">Products</a>
 </div>
 
-<!-- Products section -->
+<!-- Products -->
 <div class="container" id="products">
-
-    <!-- Nitro Method -->
     <div class="card">
         <h2>Nitro Method</h2>
         <p>Unlock premium features instantly.</p>
         <p><strong>€4</strong></p>
         <a href="checkout.html" class="btn">Buy Now</a>
     </div>
-
-    <!-- Italian CC -->
     <div class="card">
         <h2>Italian CC 🇮🇹</h2>
         <p>Premium Italian credit card service.</p>
         <p><strong>€5</strong></p>
         <a href="checkout.html?product=italian" class="btn">Buy Now</a>
     </div>
-
-    <!-- French CC -->
     <div class="card">
         <h2>French CC 🇫🇷</h2>
         <p>Premium French credit card service.</p>
@@ -167,9 +189,12 @@ body::before {
         <a href="checkout.html?product=french" class="btn">Buy Now</a>
     </div>
 
-    <!-- Coming Soon -->
     <div class="coming-soon">🌟 More Products Coming Soon! 🌟</div>
+</div>
 
+<!-- Payment guide section -->
+<div class="payment-guide">
+    💡 <strong>Payment Guide:</strong> Before making any purchases, make sure to tag <code>"2"</code> in DMs as instructed. This ensures your payment is processed correctly. All payments are via Litecoin only.
 </div>
 
 </body>

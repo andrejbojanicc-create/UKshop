@@ -5,18 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nitro Method</title>
 <style>
-/* General Dark Theme */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #050505;
     color: white;
     text-align: center;
-    padding: 50px;
+    padding: 50px 20px 100px 20px;
     overflow-x: hidden;
 }
-
-/* Glowing animated background */
 body::before {
     content: "";
     position: fixed;
@@ -32,8 +29,6 @@ body::before {
     0% { transform: translate(0,0); }
     100% { transform: translate(300px,200px); }
 }
-
-/* Card styling */
 .card {
     background: rgba(20,20,20,0.9);
     padding: 50px;
@@ -47,25 +42,16 @@ body::before {
     box-shadow: 0 0 40px rgba(0,255,200,0.4);
     border-color: #00ffc8;
 }
-
-/* Header & text */
-h1 {
-    margin-bottom: 10px;
-}
-p {
-    color: #aaa;
-    font-size: 16px;
-}
-
-/* Button */
+h1 { margin-bottom: 10px; }
+p { color: #aaa; font-size: 16px; margin-bottom: 20px; }
 .btn {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 12px 25px;
     border-radius: 8px;
     border: 1px solid #00ffc8;
     color: #00ffc8;
     text-decoration: none;
-    margin-top: 20px;
+    margin: 5px;
     transition: 0.3s;
 }
 .btn:hover {
@@ -73,13 +59,30 @@ p {
     color: black;
     box-shadow: 0 0 20px #00ffc8;
 }
-
-/* Footer */
-footer {
-    margin-top: 50px;
-    color: #555;
-    border-top: 1px solid #111;
-    padding-top: 20px;
+.footer-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 14px;
+    color: #aaa;
+}
+.footer-buttons .about-text {
+    max-width: 250px;
+    text-align: left;
+    font-size: 14px;
+}
+.footer-buttons a.about-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #00ffc8;
+    font-weight: bold;
+}
+.footer-buttons a.about-btn:hover {
+    text-decoration: underline;
 }
 </style>
 </head>
@@ -92,7 +95,23 @@ footer {
     <a href="checkout.html" class="btn">Buy Now</a>
 </div>
 
-<footer>More services coming soon...</footer>
+<!-- Footer buttons -->
+<div class="footer-buttons">
+    <!-- About Us redirects to about.html -->
+    <div class="about-text">
+        <a href="about.html" class="about-btn">
+            About Us
+        </a>: We provide premium Discord features for a much cheaper price!
+    </div>
+
+    <!-- Discord button -->
+    <a href="https://discord.gg/cAHcmxJX" target="_blank" class="btn">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord" style="height:16px; vertical-align:middle; margin-right:6px;">
+        Join Discord
+    </a>
+</div>
+
+<footer style="margin-top:200px;">More services coming soon...</footer>
 
 </body>
 </html>

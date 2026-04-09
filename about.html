@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us - Nitro Method</title>
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background: #050505;
     color: white;
-    text-align: center;
-    padding: 50px 20px 50px 20px;
+    padding: 50px 20px;
+    overflow-x: hidden;
 }
-h1 { margin-bottom: 20px; }
-p { color: #aaa; font-size: 16px; line-height: 1.6; margin-bottom: 15px; max-width: 700px; margin-left: auto; margin-right: auto; }
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+p {
+    max-width: 800px;
+    margin: 20px auto;
+    color: #aaa;
+    font-size: 16px;
+    line-height: 1.7;
+    transition: 0.3s;
+}
+p:hover {
+    color: #00ffc8;
+}
 .btn {
     display: inline-block;
     padding: 12px 25px;
@@ -22,27 +35,45 @@ p { color: #aaa; font-size: 16px; line-height: 1.6; margin-bottom: 15px; max-wid
     border: 1px solid #00ffc8;
     color: #00ffc8;
     text-decoration: none;
-    margin-top: 20px;
     transition: 0.3s;
+    margin-top: 30px;
 }
 .btn:hover {
     background: #00ffc8;
     color: black;
     box-shadow: 0 0 20px #00ffc8;
 }
+/* Glowing background */
+body::before {
+    content: "";
+    position: fixed;
+    width: 700px;
+    height: 700px;
+    background: rgba(0,255,200,0.08);
+    filter: blur(120px);
+    top: -150px;
+    left: -150px;
+    animation: glow 15s infinite alternate;
+    z-index: -1;
+}
+@keyframes glow {
+    0% { transform: translate(0,0); }
+    50% { transform: translate(300px,150px); }
+    100% { transform: translate(0,0); }
+}
 </style>
 </head>
-
 <body>
 
 <h1>About Us</h1>
-<p>At Nitro Method, our mission is simple: we want to help our customers get premium Discord features at an affordable price. We understand how expensive premium tools can be, and we believe everyone deserves access to the best features without breaking the bank.</p>
 
-<p>Our team is committed to providing top-notch services, ensuring that every customer gets the help and support they need. We focus on reliability, transparency, and providing value for your money.</p>
+<p>At Nitro Method, our mission is to provide high-quality premium services at affordable prices. We focus on helping our customers access features they wouldn’t normally get, in a safe and reliable environment.</p>
 
-<p>By joining our Discord, you gain access to special features, support, and updates designed to make your experience seamless and enjoyable. Our goal is to make premium features accessible to all, while keeping the experience fun and engaging.</p>
+<p>Our premium Discord services include Nitro Method and credit card options for different regions. We prioritize your satisfaction and ensure smooth delivery of every purchase. Our team is constantly improving features and listening to community feedback.</p>
 
-<p>We listen to our community and constantly improve our services based on your feedback. Your satisfaction is our priority, and we are dedicated to making Nitro Method the best choice for affordable premium Discord features.</p>
+<p>We believe in transparency, quality, and offering unmatched value. Our services are designed to make your experience seamless and enjoyable, while giving you the tools to take full advantage of premium offerings.</p>
+
+<p>Join our Discord to stay updated on the latest services and get support directly from our team. We are committed to building a community that benefits everyone who trusts Nitro Method.</p>
 
 <a href="index.html" class="btn">Back to Home</a>
 

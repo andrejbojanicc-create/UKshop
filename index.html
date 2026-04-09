@@ -67,22 +67,15 @@ p { color: #aaa; font-size: 16px; margin-bottom: 20px; }
     display: flex;
     gap: 20px;
     align-items: center;
-    font-size: 14px;
-    color: #aaa;
 }
-.footer-buttons .about-text {
-    max-width: 250px;
-    text-align: left;
-    font-size: 14px;
-}
-.footer-buttons a.about-btn {
-    display: inline-block;
-    text-decoration: none;
-    color: #00ffc8;
+.footer-buttons a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
     font-weight: bold;
 }
-.footer-buttons a.about-btn:hover {
-    text-decoration: underline;
+.footer-buttons img {
+    height: 16px;
 }
 </style>
 </head>
@@ -95,18 +88,14 @@ p { color: #aaa; font-size: 16px; margin-bottom: 20px; }
     <a href="checkout.html" class="btn">Buy Now</a>
 </div>
 
-<!-- Footer buttons -->
+<!-- Footer buttons only -->
 <div class="footer-buttons">
-    <!-- About Us redirects to about.html -->
-    <div class="about-text">
-        <a href="about.html" class="about-btn">
-            About Us
-        </a>: We provide premium Discord features for a much cheaper price!
-    </div>
+    <!-- About Us button -->
+    <a href="about.html" class="btn">About Us</a>
 
     <!-- Discord button -->
     <a href="https://discord.gg/cAHcmxJX" target="_blank" class="btn">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord" style="height:16px; vertical-align:middle; margin-right:6px;">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord">
         Join Discord
     </a>
 </div>

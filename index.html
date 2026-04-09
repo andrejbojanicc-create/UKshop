@@ -14,7 +14,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Glowing background effect */
+/* Glowing background */
 body::before {
     content:"";
     position: fixed;
@@ -110,11 +110,21 @@ body::before {
     box-shadow: 0 0 20px #00ffc8;
 }
 
-/* Footer */
-footer {
+/* "More Products Coming Soon" banner */
+.coming-soon {
+    width: 100%;
     text-align: center;
     margin-top: 50px;
-    color: #555;
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ffc8;
+    text-shadow: 0 0 10px #00ffc8, 0 0 20px #00ffc8, 0 0 30px #00ffc8;
+    animation: glowText 2s ease-in-out infinite alternate;
+}
+@keyframes glowText {
+    0% { text-shadow: 0 0 5px #00ffc8, 0 0 10px #00ffc8; }
+    50% { text-shadow: 0 0 15px #00ffc8, 0 0 30px #00ffc8, 0 0 45px #00ffc8; }
+    100% { text-shadow: 0 0 5px #00ffc8, 0 0 10px #00ffc8; }
 }
 </style>
 </head>
@@ -157,9 +167,10 @@ footer {
         <a href="checkout.html?product=french" class="btn">Buy Now</a>
     </div>
 
-</div>
+    <!-- Coming Soon -->
+    <div class="coming-soon">🌟 More Products Coming Soon! 🌟</div>
 
-<footer>More services coming soon...</footer>
+</div>
 
 </body>
 </html>
